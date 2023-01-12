@@ -166,12 +166,47 @@
     </section>
     <!-- Akhir Project -->
 
+    <!-- Produk -->
+    <section id="my-product">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>My Product</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="produk-box">
+              <h4 class="produk1">LOGIN PAGE SEKAR IoT</h4>
+              <img src="img/Product/1.png" alt="Produk1" class="produk-login1" />
+              <a href="#" class="btn btn-light produk-detail-button"><i class="bi bi-ticket-detailed-fill"></i> Details</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="produk-box">
+              <h4 class="produk1">HOME PAGE SEKAR IoT</h4>
+              <img src="img/Product/2.png" alt="Produk1" class="produk-login1" />
+              <a href="#" class="btn btn-light produk-detail-button"><i class="bi bi-ticket-detailed-fill"></i> Details</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="produk-box">
+              <h4 class="produk1">MONITORING SEKAR IoT</h4>
+              <img src="img/Product/3.png" alt="Produk1" class="produk-login1" />
+              <a href="#" class="btn btn-light produk-detail-button"><i class="bi bi-ticket-detailed-fill"></i> Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Produk -->
+
     <!-- Galery -->
     <section id="galeri">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Gallery</h2>
+            <h2 data-aos="fade-up">Gallery</h2>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -240,7 +275,7 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Contact Me</h2>
+            <h2 data-aos="fade-up">Contact Me</h2>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -352,6 +387,17 @@
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <!-- Script untuk tilts JS untuk animasi 3d saat cursor terdeteksi -->
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".produk-box"), {
+        max: 20,
+        speed: 1000,
+        glare: true,
+        "max-glare": 0.3,
       });
     </script>
   </body>

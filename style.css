@@ -18,3 +18,98 @@ section {
 #galeri .row > * {
   padding: 0;
 }
+
+/* Produk Section */
+.produk-box {
+  position: relative;
+  background-color: #0c6efd;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.produk-box::before {
+  content: "PRODUCT";
+  position: absolute;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+  top: 100px;
+  left: 15%;
+  transform: translate(-50%, 0) rotate(2deg);
+  opacity: 0;
+  transition: 0.5s;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.produk-box:hover::before {
+  opacity: 0.4;
+}
+
+.produk-box::after {
+  content: "PRODUCT";
+  position: absolute;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+  top: 100px;
+  left: 85%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  opacity: 0;
+}
+
+.produk-box:hover::after {
+  opacity: 0.4;
+  transform: translate(-50%, 0) rotate(2deg);
+}
+
+.produk1 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.produk-box:hover .produk1 {
+  top: 20px;
+  opacity: 1;
+}
+
+.produk-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.produk-box:hover .produk-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.produk-login1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 100px) rotate(10deg) scale(1.5);
+  max-width: 350px;
+  transition: 0.5s;
+}
+
+.produk-box:hover .produk-login1 {
+  transform: translate(-50%, -52%) rotate(0deg) scale(1.8);
+}
