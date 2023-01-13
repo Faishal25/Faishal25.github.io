@@ -93,6 +93,9 @@
     </section>
     <!-- Akhir About -->
 
+    <!-- Awal Skill -->
+    <!-- Akhir Skill -->
+
     <!-- Projects -->
     <section id="projects">
       <div class="container">
@@ -200,6 +203,146 @@
       </div>
     </section>
     <!-- Akhir Produk -->
+
+    <!-- Awal Sertifikat -->
+    <section id="my-serti">
+      <div class="container text-center my-3">
+        <div class="row mx-auto my-auto justify-content-center">
+          <h2 data-aos="fade-down" class="mb-3">My Certificate</h2>
+          <div data-aos="flip-left" id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/a.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/b.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/c1.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/c2.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/d.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/e.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/f.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/g.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/h.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/i.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/j.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="img/serti/k.png" class="img-fluid" />
+                    </div>
+                    <div class="card-img-overlay"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Sertifikat -->
 
     <!-- Galery -->
     <section id="galeri">
@@ -398,6 +541,26 @@
         speed: 1000,
         glare: true,
         "max-glare": 0.3,
+      });
+    </script>
+
+    <!-- Script untuk carousel -->
+
+    <script>
+      let items = document.querySelectorAll(".carousel .carousel-item");
+
+      items.forEach((el) => {
+        const minPerSlide = 3;
+        let next = el.nextElementSibling;
+        for (var i = 1; i < minPerSlide; i++) {
+          if (!next) {
+            // wrap carousel by using first child
+            next = items[0];
+          }
+          let cloneChild = next.cloneNode(true);
+          el.appendChild(cloneChild.children[0]);
+          next = next.nextElementSibling;
+        }
       });
     </script>
   </body>
